@@ -24,3 +24,26 @@ To install these dependencies on a Debian-based system (e.g., Ubuntu), run:
 
 ```bash
 sudo apt-get install libncurses-dev libfmt-dev
+
+### BUILDING THE PROJECT
+
+To build the Process Monitoring System, follow these steps:
+
+Navigate to the scripts Directory:
+Open your terminal and change to the scripts directory, where the build script is located:
+
+bash
+Copy
+cd scripts
+Make the Build Script Executable:
+Ensure the build script has the necessary permissions to execute:
+
+bash
+Copy
+chmod +x builder.sh
+Run the Build Script:
+Execute the build script to compile and configure the project:
+
+bash
+Copy
+./builder.sh
