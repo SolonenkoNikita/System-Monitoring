@@ -1,18 +1,24 @@
+#include "process/process.hpp"
 #include <parser/parser.hpp>
 
-#include <chrono>
-#include <thread>
+#include <System/System.hpp>
 
 int main() 
-{ 
-    int pid = 161812;
-    while (true) 
+{
+    process pr(1);
+    for(int  i = 0; i < 10; ++i) 
     {
-      std::string time_plus = get_process_uptime(pid);
-      std::cout << "TIME+ процесса " << pid << ": " << time_plus << std::flush << '\n';
-
-      
-      std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << "PID: " << pr.get_pid() << " USER " << pr.user() << " PRI "
+                << pr.pri() << " VIRT " << pr.get_rams()[0] << " RES "
+                << pr.get_rams()[1] << " S " << pr.stat() << " CPU% "
+                << pr.cpu();
+        std::cout << "\n\n";
+        //std::this_thread::sleep_for(std::chrono::seconds(1));
     }
+    
+              
+    /*System &system = System::get_instance();
+
+    system.run();*/
     return 0;
 }
