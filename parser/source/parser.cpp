@@ -107,7 +107,7 @@ double get_ram(unsigned pid, const std::string& type, size_t align_memory)
             iss >> key >> ram;
             file_stream.close();
 
-            return std::round((ram / align_memory) * 10) / 10;
+            return ram * 1024;//std::round((ram / align_memory) * 10) / 10;
         }
     }
     file_stream.close();
@@ -322,7 +322,7 @@ double up_time()
     if (!file_stream.is_open()) 
     {
       std::cerr << "Open file error: " << path << '\n';
-      return std::numeric_limits<long>::min();
+      return std::numeric_limits<double>::min();
     }
     std::string line;
     std::getline(file_stream, line);
@@ -368,4 +368,50 @@ double cpu_proc_utilization(unsigned pid)
     double cpu_usage = ((total_time / Hertz) / seconds);
 
     return cpu_usage;
+}
+
+std::string get_os()
+{
+    std::string line, key, value;
+    std::ifstream file_stream(os_release);
+    if (!file_stream.is_open()) 
+    {
+        std::cerr << "Open file error: " << os_release << '\n';
+        return "";
+    }
+    while (std::getline(file_stream, line)) 
+    {
+        std::replace(line.begin(), line.end(), ' ', '_');
+        std::replace(line.begin(), line.end(), '=', ' ');
+        std::replace(line.begin(), line.end(), '"', ' ');
+        std::istringstream iss(line);
+        while (iss >> key >> value) 
+        {
+            if (key == "PRETTY_NAME") 
+            {
+                std::replace(value.begin(), value.end(), '_', ' ');
+                file_stream.close();
+                return value;
+            }
+        }
+    }
+    file_stream.close();
+    return "";
+}
+
+std::string get_kernel() 
+{
+    std::string line;
+    std::ifstream file_stream(proc + version);
+    if (!file_stream.is_open()) 
+    {
+        std::cerr << "Open file error: " << proc + version << '\n';
+        return "";
+    }
+    std::getline(file_stream, line);
+    std::string os, ver, kernel;
+    std::istringstream iss(line);
+    iss >> os >> ver >> kernel;
+    file_stream.close();
+    return kernel;
 }

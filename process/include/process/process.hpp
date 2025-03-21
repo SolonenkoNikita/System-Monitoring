@@ -19,9 +19,9 @@ public:
 
     [[nodiscard]] std::string& user() noexcept;
 
-    [[nodiscard]] const std::array<double, 3>& get_rams() const noexcept;
+    [[nodiscard]] double get_virt() const noexcept;
 
-    [[nodiscard]] std::array<double, 3>& get_rams() noexcept;
+    [[nodiscard]] double get_res() const noexcept;
 
     [[nodiscard]] char stat() const noexcept;
 
@@ -29,12 +29,13 @@ public:
 
     [[nodiscard]] double cpu() const noexcept;
 
-  private:
+private:
     unsigned pid_;
     double cpu_;
     std::string command_;
     std::string user_;
-    std::array<double, 3> rams_; //std::vector or array
+    double virt_;
+    double res_; 
     char stat_;
     int pri_;
 };

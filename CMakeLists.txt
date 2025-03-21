@@ -11,3 +11,7 @@ add_subdirectory(Directories)
 add_subdirectory(parser)
 
 add_subdirectory(System)
+
+add_subdirectory(Display)
+
+add_subdirectory(Utils)

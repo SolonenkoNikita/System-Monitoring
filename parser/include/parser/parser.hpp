@@ -38,3 +38,7 @@ int get_pri(unsigned);
 double up_time();
 
 double cpu_proc_utilization(unsigned);
+
+std::string get_os();
+
+std::string get_kernel();

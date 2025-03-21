@@ -7,6 +7,16 @@ System::System()
         process_.emplace_back(std::move(process(num)));
 }
 
+[[nodiscard]] const std::vector<process>& System::get_processes() const noexcept
+{
+    return process_;
+}
+
+[[nodiscard]] std::vector<process>& System::get_processes() noexcept
+{
+    return process_;
+}
+
 void System::run() const noexcept
 {
     while(true)

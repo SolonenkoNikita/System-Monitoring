@@ -15,6 +15,10 @@ public:
         return instance;
     }
 
+    [[nodiscard]] const std::vector<process>& get_processes() const noexcept;
+
+    [[nodiscard]] std::vector<process> &get_processes()noexcept;
+
     System(const System &) = delete;
     System& operator=(const System &) = delete;
 
