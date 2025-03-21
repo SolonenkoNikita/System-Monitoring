@@ -42,3 +42,34 @@ double cpu_proc_utilization(unsigned);
 std::string get_os();
 
 std::string get_kernel();
+
+namespace used_memory 
+{
+    struct memory_info 
+    {
+        double used_;
+        double total_;
+        double percent_;
+    };
+} 
+
+used_memory::memory_info get_memory();
+
+namespace cpu
+{
+    struct cpu_usage 
+    {
+        long user_;       
+        long nice_;      
+        long system_;    
+        long idle_;      
+        long iowait_;   
+        long irq_;      
+        long softirq_;  
+        long steal_;     
+        long guest_;     
+        long guest_nice_;
+    };
+}
+
+cpu::cpu_usage get_cpu();

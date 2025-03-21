@@ -5,6 +5,7 @@
 #include <chrono>
 #include <memory>
 #include <thread>
+#include <algorithm>
 
 class System final
 {
@@ -22,7 +23,6 @@ public:
     System(const System &) = delete;
     System& operator=(const System &) = delete;
 
-    void run() const noexcept;
 private:
     System();
     std::vector<process> process_;

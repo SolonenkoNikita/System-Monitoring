@@ -339,8 +339,8 @@ double cpu_proc_utilization(unsigned pid)
     std::ifstream file_stream(path);
     if (!file_stream.is_open()) 
     {
-      std::cerr << "Open file error: " << path << '\n';
-      return std::numeric_limits<double>::min();
+        std::cerr << "Open file error: " << path << '\n';
+        return std::numeric_limits<double>::min();
     }
     std::string line, value;
     std::getline(file_stream, line);
@@ -414,4 +414,58 @@ std::string get_kernel()
     iss >> os >> ver >> kernel;
     file_stream.close();
     return kernel;
+}
+
+used_memory::memory_info get_memory() 
+{
+    std::ifstream file_stream(proc + meminfo);
+    if (!file_stream.is_open()) 
+    {
+        std::cerr << "Open file error: " << proc + version << '\n';
+        return {0, 0, 0};
+    }
+    double mem_total, mem_free, value;
+    std::string line, key;
+    while (std::getline(file_stream, line)) 
+    {
+        std::istringstream iss(line);
+        while (iss >> key >> value) 
+        {
+            if (key == "MemTotal:") 
+                mem_total = value;
+            else if (key == "MemFree:") 
+                mem_free = value;
+        }
+    }
+    file_stream.close();
+    double used = mem_total - mem_free;
+    double percent = (used / mem_total) * 100;
+    return { used, mem_total, percent };
+}
+
+cpu::cpu_usage get_cpu()
+{
+    std::ifstream file_stream(proc + stat);
+    if (!file_stream.is_open()) 
+        throw std::runtime_error("Failed to open /proc/stat");
+    std::string line;
+    while (std::getline(file_stream, line)) 
+    {
+        if (line.compare(0, 3, "cpu") == 0) 
+        { 
+            std::istringstream iss(line);
+            std::string cpu;
+            iss >> cpu; 
+
+            cpu::cpu_usage usage;
+            iss>> usage.user_ >> usage.nice_ >> usage.system_ >> usage.idle_ >>
+                usage.iowait_ >> usage.irq_ >> usage.softirq_ >> usage.steal_ >>
+                usage.guest_ >> usage.guest_nice_;
+
+            file_stream.close();
+            return usage;
+        }
+    }
+    file_stream.close();
+    throw std::runtime_error("CPU utilization data not found in /proc/stat");
 }
