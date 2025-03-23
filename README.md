@@ -49,3 +49,12 @@ Execute the build script to compile and configure the project:
 ```bash
 ./builder.sh
 ```
+## Documentation
+Before running Doxyfile:
+'''bash
+sudo apt install doxygen
+'''
+After that, you can write:
+'''bash
+doxygen Doxyfile
+'''
