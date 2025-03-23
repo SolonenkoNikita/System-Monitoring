@@ -24,7 +24,7 @@ _deps
 /docs/_build/
 /docs/*.html
 /docs/*.pdf
-
+Doxyfile
 # IDE-specific files
 *.sln
 *.vcxproj

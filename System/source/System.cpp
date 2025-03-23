@@ -4,9 +4,25 @@ System::System()
 {
     std::vector<unsigned> pids = get_pids();
     for(auto num : pids)
+    {
+        values_.emplace(num);
         process_.emplace_back(std::move(process(num)));
-    
-    std::sort(process_.begin(), process_.end(), [](const process& a, const process&b) 
+    }
+}
+
+void System::update(const std::vector<unsigned>& pids_)
+{
+    for(auto i : pids_)
+    {
+        auto it = values_.find(i);
+        if(it == values_.cend())
+        {
+            values_.emplace(i);
+            process_.emplace_back(std::move(process(i)));
+        }
+    }
+    std::string current_user = getenv("USER");
+    std::sort(process_.begin(), process_.end(), [&current_user](const process& a, const process&b) 
     {
         if (a.stat() == 'R' && b.stat() != 'R') 
             return true;

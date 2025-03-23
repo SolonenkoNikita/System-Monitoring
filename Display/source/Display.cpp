@@ -1,6 +1,6 @@
 #include "Display/Display.hpp"
 
-void display_processes(const std::vector<process>& processes, WINDOW *window) 
+void display_processes(std::vector<process>& processes, WINDOW *window) 
 {
     int row {0};
     const int pid_column {2};
@@ -9,9 +9,9 @@ void display_processes(const std::vector<process>& processes, WINDOW *window)
     const int virt_colomn {26};
     const int res_colomn {40};
     const int s_colomn {52};
-    const int cpu_column {57};
-    const int time_column {66};
-    const int command_column {79};
+    const int cpu_column {55};
+    const int time_column {63};
+    const int command_column {75};
     wattron(window, COLOR_PAIR(2));
     mvwprintw(window, ++row, pid_column, "PID");
     mvwprintw(window, row, user_column, "USER");
@@ -25,6 +25,12 @@ void display_processes(const std::vector<process>& processes, WINDOW *window)
     wattroff(window, COLOR_PAIR(2));
     for (unsigned i = 0; i < processes.size(); ++i) 
     {
+        processes.erase(std::remove_if(processes.begin(), processes.end(), [](const process &p) 
+                            {
+                                return !std::filesystem::exists( proc 
+                                + std::to_string(p.get_pid()) + stat); 
+                            }), processes.end());
+        
         mvwprintw(window, ++row, pid_column, "%s", std::to_string(processes[i].get_pid()).c_str());
         mvwprintw(window, row, user_column, "%s", processes[i].user().c_str());
         mvwprintw(window, row, pri_colomn,  "%s", std::to_string(processes[i].pri()).c_str());
@@ -94,7 +100,7 @@ void display_system_info(WINDOW* window)
     wattroff(window, COLOR_PAIR(1));
 }
 
-void run(const System &system)
+void run(System &system)
 {
     initscr();
     noecho();
@@ -102,13 +108,13 @@ void run(const System &system)
     start_color();
     int x_max{getmaxx(stdscr)};
     WINDOW *system_window = newwin(9, x_max - 1, 0, 0);
-    WINDOW *process_window = newwin(3 + system.get_processes().size(), x_max - 1,
-                                    system_window->_maxy + 1, 0);
-    int scroll_offset = 0;
-    while (true) {
+    WINDOW *process_window = newwin(3 + system.get_processes().size(), x_max - 1, system_window->_maxy + 1, 0);
+    while (true) 
+    {
+        std::vector<unsigned> pids = get_pids();
+        system.update(pids);
         init_pair(1, COLOR_WHITE, COLOR_BLACK);
         init_pair(2, COLOR_GREEN, COLOR_BLACK);
-
         int max_visible_rows = process_window->_maxy - 1;
         werase(system_window);
         werase(process_window);
@@ -125,4 +131,3 @@ void run(const System &system)
     }
     endwin();
 }
-

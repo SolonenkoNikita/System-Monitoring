@@ -86,7 +86,7 @@ std::string get_command(unsigned pid)
     return line;
 }
 
-double get_ram(unsigned pid, const std::string& type, size_t align_memory)
+double get_ram(unsigned pid, const std::string& type)
 {
     std::string file_path = proc + std::to_string(pid) + status;
     std::ifstream file_stream(file_path);
@@ -107,7 +107,7 @@ double get_ram(unsigned pid, const std::string& type, size_t align_memory)
             iss >> key >> ram;
             file_stream.close();
 
-            return ram * 1024;//std::round((ram / align_memory) * 10) / 10;
+            return ram * 1024;
         }
     }
     file_stream.close();
@@ -268,7 +268,7 @@ int get_pri(unsigned pid)
     if (!file_stream.is_open()) 
     {
         std::cerr << "Open file error: " << file_path << '\n';
-        return 0; 
+        return std::numeric_limits<int>::min(); 
     }
 
     std::string line;
@@ -276,7 +276,7 @@ int get_pri(unsigned pid)
     {
         std::cerr << "Couldn't read the file " << file_path << '\n';
         file_stream.close();
-        return 0;
+        return std::numeric_limits<int>::min();
     }
     file_stream.close();
 
@@ -288,7 +288,7 @@ int get_pri(unsigned pid)
         if (!(iss >> token)) 
         {
             std::cerr << "Error parsing from " << file_path << '\n';
-            return 0;
+            return std::numeric_limits<int>::min();
         }
     }
 
@@ -296,14 +296,14 @@ int get_pri(unsigned pid)
     if (!(iss >> priority)) 
     {
         std::cerr << "Error reading priority from " << file_path << '\n';
-        return 0;
+        return std::numeric_limits<int>::min();
     }
 
     int nice;
     if (!(iss >> nice)) 
     {
         std::cerr << "Error reading nice from " << file_path << '\n';
-        return 0;
+        return std::numeric_limits<int>::min();
     }
 
     int pri;

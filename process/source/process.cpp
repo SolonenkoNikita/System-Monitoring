@@ -1,4 +1,5 @@
 #include "process/process.hpp"
+
 #include <string>
 
 process::process(unsigned pid) : pid_(pid) 
@@ -6,8 +7,8 @@ process::process(unsigned pid) : pid_(pid)
     cpu_ = cpu_proc_utilization(pid);
     command_ = get_command(pid);
     user_ = get_user(pid);
-    virt_ = get_ram(pid, "VmSize:", 1024 * 1024);
-    res_ = get_ram(pid, "VmRSS:", 1024);
+    virt_ = get_ram(pid, "VmSize:");
+    res_ = get_ram(pid, "VmRSS:");
     stat_ = get_stat(pid);
     pri_ = get_pri(pid);
 }
