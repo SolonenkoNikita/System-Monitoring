@@ -58,3 +58,6 @@ After that, you can write:
 ```bash
 doxygen Doxyfile
 ```
+## Appearance
+The program's appearance will resemble the htop command:
+![image](https://github.com/user-attachments/assets/f7493ccc-4858-493e-a8eb-9d39d08ae5e6)
