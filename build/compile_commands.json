@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/nikita/system_monitoring/build",
+  "command": "/usr/bin/clang++ -DFMT_LOCALE -DFMT_SHARED -I/home/nikita/system_monitoring/Display/include -I/home/nikita/system_monitoring/Utils/include -I/home/nikita/system_monitoring/parser/include -I/home/nikita/system_monitoring/Directories/include -I/home/nikita/system_monitoring/System/include -I/home/nikita/system_monitoring/process/include -g -std=gnu++20 -o Dialogue/CMakeFiles/Dialogue.dir/source/main.cpp.o -c /home/nikita/system_monitoring/Dialogue/source/main.cpp",
+  "file": "/home/nikita/system_monitoring/Dialogue/source/main.cpp"
+},
+{
+  "directory": "/home/nikita/system_monitoring/build",
+  "command": "/usr/bin/clang++ -I/home/nikita/system_monitoring/process/include -I/home/nikita/system_monitoring/parser/include -I/home/nikita/system_monitoring/Directories/include -g -std=gnu++20 -o process/CMakeFiles/process.dir/source/process.cpp.o -c /home/nikita/system_monitoring/process/source/process.cpp",
+  "file": "/home/nikita/system_monitoring/process/source/process.cpp"
+},
+{
+  "directory": "/home/nikita/system_monitoring/build",
+  "command": "/usr/bin/clang++ -I/home/nikita/system_monitoring/parser/include -I/home/nikita/system_monitoring/Directories/include -g -std=gnu++20 -o parser/CMakeFiles/parser.dir/source/parser.cpp.o -c /home/nikita/system_monitoring/parser/source/parser.cpp",
+  "file": "/home/nikita/system_monitoring/parser/source/parser.cpp"
+},
+{
+  "directory": "/home/nikita/system_monitoring/build",
+  "command": "/usr/bin/clang++ -I/home/nikita/system_monitoring/System/include -I/home/nikita/system_monitoring/process/include -I/home/nikita/system_monitoring/parser/include -I/home/nikita/system_monitoring/Directories/include -g -std=gnu++20 -o System/CMakeFiles/System.dir/source/System.cpp.o -c /home/nikita/system_monitoring/System/source/System.cpp",
+  "file": "/home/nikita/system_monitoring/System/source/System.cpp"
+},
+{
+  "directory": "/home/nikita/system_monitoring/build",
+  "command": "/usr/bin/clang++ -DFMT_LOCALE -DFMT_SHARED -I/home/nikita/system_monitoring/Display/include -I/home/nikita/system_monitoring/Utils/include -I/home/nikita/system_monitoring/parser/include -I/home/nikita/system_monitoring/Directories/include -I/home/nikita/system_monitoring/System/include -I/home/nikita/system_monitoring/process/include -g -std=gnu++20 -o Display/CMakeFiles/Display.dir/source/Display.cpp.o -c /home/nikita/system_monitoring/Display/source/Display.cpp",
+  "file": "/home/nikita/system_monitoring/Display/source/Display.cpp"
+},
+{
+  "directory": "/home/nikita/system_monitoring/build",
+  "command": "/usr/bin/clang++ -I/home/nikita/system_monitoring/Utils/include -I/home/nikita/system_monitoring/parser/include -I/home/nikita/system_monitoring/Directories/include -g -std=gnu++20 -o Utils/CMakeFiles/Utils.dir/source/Utils.cpp.o -c /home/nikita/system_monitoring/Utils/source/Utils.cpp",
+  "file": "/home/nikita/system_monitoring/Utils/source/Utils.cpp"
+}
+]

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Dialogue.dir/source/main.cpp.o -o Dialogue  ../Display/libDisplay.a ../System/libSystem.a ../parser/libparser.a -lcurses /usr/lib/x86_64-linux-gnu/libform.so ../process/libprocess.a ../Utils/libUtils.a ../parser/libparser.a /usr/lib/x86_64-linux-gnu/libfmt.so.8.1.1 -Wl,--as-needed 

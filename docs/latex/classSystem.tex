@@ -1,0 +1,100 @@
+\hypertarget{classSystem}{}\doxysection{System Class Reference}
+\label{classSystem}\index{System@{System}}
+
+
+Represents the system and manages processes.  
+
+
+
+
+{\ttfamily \#include $<$System.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classprocess}{process}} $>$ \& \mbox{\hyperlink{classSystem_ad3390327fd4ddebd8f56f95ac9771af6}{get\+\_\+processes}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the list of processes (const version). \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classprocess}{process}} $>$ \& \mbox{\hyperlink{classSystem_a3b64fef316957271592e975c8ee9a839}{get\+\_\+processes}} () noexcept
+\begin{DoxyCompactList}\small\item\em Returns the list of processes (non-\/const version). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSystem_a5f57703169a9d3588126c571ca1ab068}\label{classSystem_a5f57703169a9d3588126c571ca1ab068}} 
+{\bfseries System} (const \mbox{\hyperlink{classSystem}{System}} \&)=delete
+\item 
+\mbox{\Hypertarget{classSystem_a35c2f2eae9c6ee8e8fd8b81f9a707934}\label{classSystem_a35c2f2eae9c6ee8e8fd8b81f9a707934}} 
+\mbox{\hyperlink{classSystem}{System}} \& {\bfseries operator=} (const \mbox{\hyperlink{classSystem}{System}} \&)=delete
+\item 
+void \mbox{\hyperlink{classSystem_ad78d7822ff13363af89a28623f0da139}{update}} (const std\+::vector$<$ unsigned $>$ \&pids\+\_\+)
+\begin{DoxyCompactList}\small\item\em Updates the list of processes with the given PIDs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classSystem}{System}} \& \mbox{\hyperlink{classSystem_a122b13802bc5c2bebc66e502f9a532e9}{get\+\_\+instance}} () noexcept
+\begin{DoxyCompactList}\small\item\em Returns the singleton instance of the {\ttfamily \mbox{\hyperlink{classSystem}{System}}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the system and manages processes. 
+
+This class is a singleton that provides access to the list of processes running on the system. It allows updating the list of processes and retrieving them in a sorted order. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSystem_a122b13802bc5c2bebc66e502f9a532e9}\label{classSystem_a122b13802bc5c2bebc66e502f9a532e9}} 
+\index{System@{System}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!System@{System}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classSystem}{System}}\& System\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the singleton instance of the {\ttfamily \mbox{\hyperlink{classSystem}{System}}} class. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the singleton instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_ad3390327fd4ddebd8f56f95ac9771af6}\label{classSystem_ad3390327fd4ddebd8f56f95ac9771af6}} 
+\index{System@{System}!get\_processes@{get\_processes}}
+\index{get\_processes@{get\_processes}!System@{System}}
+\doxysubsubsection{\texorpdfstring{get\_processes()}{get\_processes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classprocess}{process}}$>$\& System\+::get\+\_\+processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the list of processes (const version). 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the vector of processes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a3b64fef316957271592e975c8ee9a839}\label{classSystem_a3b64fef316957271592e975c8ee9a839}} 
+\index{System@{System}!get\_processes@{get\_processes}}
+\index{get\_processes@{get\_processes}!System@{System}}
+\doxysubsubsection{\texorpdfstring{get\_processes()}{get\_processes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classprocess}{process}}$>$\& System\+::get\+\_\+processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the list of processes (non-\/const version). 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of processes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_ad78d7822ff13363af89a28623f0da139}\label{classSystem_ad78d7822ff13363af89a28623f0da139}} 
+\index{System@{System}!update@{update}}
+\index{update@{update}!System@{System}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void System\+::update (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ unsigned $>$ \&}]{pids\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Updates the list of processes with the given PIDs. 
+
+This method adds new processes to the list and sorts them by their state (running processes first) and PID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pids\+\_\+} & A vector of process IDs (PIDs) to update the list with. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+System/include/\+System/System.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,303 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "Dialogue",
+					"jsonFile" : "directory-Dialogue-Debug-a55e6a12a58832db3019.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Dialogue",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "process",
+					"jsonFile" : "directory-process-Debug-ee43ada83cbd23ea41cc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "process",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "Directories",
+					"jsonFile" : "directory-Directories-Debug-47e5ffd968362a8890b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Directories"
+				},
+				{
+					"build" : "parser",
+					"jsonFile" : "directory-parser-Debug-d8481011a4b315b11951.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "parser",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "System",
+					"jsonFile" : "directory-System-Debug-3a589c39cb503ed0c9ca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "System",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Display",
+					"jsonFile" : "directory-Display-Debug-52128923462d25cac63c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "Display",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Utils",
+					"jsonFile" : "directory-Utils-Debug-bed32b7478db85617514.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "Utils",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "System_Monitoring",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Dialogue",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "process",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "Directories",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "parser",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "System",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "Display",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "Utils",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Dialogue::@fa51d40dfd653a7a72d0",
+					"jsonFile" : "target-Dialogue-Debug-70ba68cc5c8654a0e4be.json",
+					"name" : "Dialogue",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "Display::@c4cde679fe60da11761e",
+					"jsonFile" : "target-Display-Debug-b7e6703cc381f473a0f0.json",
+					"name" : "Display",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "System::@77865e25bd85470ab293",
+					"jsonFile" : "target-System-Debug-677636a163b8acea0edc.json",
+					"name" : "System",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "Utils::@63186210bb9289bb1152",
+					"jsonFile" : "target-Utils-Debug-6de2bdd8be25f7c5a550.json",
+					"name" : "Utils",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "docs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-docs-Debug-d6c889a974fbced86d98.json",
+					"name" : "docs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "parser::@72798c8d109b1720528b",
+					"jsonFile" : "target-parser-Debug-6485bad10f0527666406.json",
+					"name" : "parser",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "process::@5d0e3935f49673735701",
+					"jsonFile" : "target-process-Debug-3daf84a7bf7fdd801209.json",
+					"name" : "process",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/nikita/system_monitoring/build",
+		"source" : "/home/nikita/system_monitoring"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

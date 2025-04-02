@@ -1,0 +1,197 @@
+\hypertarget{classprocess}{}\doxysection{process Class Reference}
+\label{classprocess}\index{process@{process}}
+
+
+Represents a process in the system.  
+
+
+
+
+{\ttfamily \#include $<$process.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprocess_ad09fc10442f71d998f5507e92ffa309d}{process}} (unsigned)
+\begin{DoxyCompactList}\small\item\em Constructs a {\ttfamily process} object for the given PID. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classprocess_a72218454428d0cf89d262de4e37a35e6}{get\+\_\+pid}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the PID of the process. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classprocess_a9e9960160827a335af58af44fdab1ceb}{command}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the command that started the process (const version). \end{DoxyCompactList}\item 
+std\+::string \& \mbox{\hyperlink{classprocess_a154ef9addb91439bba5856d0bfa98096}{command}} () noexcept
+\begin{DoxyCompactList}\small\item\em Returns the command that started the process (non-\/const version). \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classprocess_a8ff4d5a920651ac9bd4e4765d2b61f48}{user}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the username of the process owner (const version). \end{DoxyCompactList}\item 
+std\+::string \& \mbox{\hyperlink{classprocess_ac81afa231fa1b874df53d7ffbf08fc75}{user}} () noexcept
+\begin{DoxyCompactList}\small\item\em Returns the username of the process owner (non-\/const version). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classprocess_a018dda77acb939bde96ef0a2b196f46a}{get\+\_\+virt}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the virtual memory usage of the process. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classprocess_abe4c83894ed50a5ed49855486e6d942e}{get\+\_\+res}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the resident memory usage of the process. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classprocess_af0f8cda02423dab727810a725e91e60e}{stat}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the current state of the process. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classprocess_a59c926d6c8a20482efa93e67c35f879b}{pri}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the priority of the process. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classprocess_accf1cf5828fd8a6af8c6951e78c1d4bd}{cpu}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the CPU usage of the process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a process in the system. 
+
+This class encapsulates information about a process, such as its PID, CPU usage, command, user, memory usage, state, and priority. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classprocess_ad09fc10442f71d998f5507e92ffa309d}\label{classprocess_ad09fc10442f71d998f5507e92ffa309d}} 
+\index{process@{process}!process@{process}}
+\index{process@{process}!process@{process}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily process\+::process (\begin{DoxyParamCaption}\item[{unsigned}]{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a {\ttfamily process} object for the given PID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The process ID (PID) of the process. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classprocess_a9e9960160827a335af58af44fdab1ceb}\label{classprocess_a9e9960160827a335af58af44fdab1ceb}} 
+\index{process@{process}!command@{command}}
+\index{command@{command}!process@{process}}
+\doxysubsubsection{\texorpdfstring{command()}{command()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::string\& process\+::command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the command that started the process (const version). 
+
+\begin{DoxyReturn}{Returns}
+The command as a constant reference to a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_a154ef9addb91439bba5856d0bfa98096}\label{classprocess_a154ef9addb91439bba5856d0bfa98096}} 
+\index{process@{process}!command@{command}}
+\index{command@{command}!process@{process}}
+\doxysubsubsection{\texorpdfstring{command()}{command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string\& process\+::command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the command that started the process (non-\/const version). 
+
+\begin{DoxyReturn}{Returns}
+The command as a reference to a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_accf1cf5828fd8a6af8c6951e78c1d4bd}\label{classprocess_accf1cf5828fd8a6af8c6951e78c1d4bd}} 
+\index{process@{process}!cpu@{cpu}}
+\index{cpu@{cpu}!process@{process}}
+\doxysubsubsection{\texorpdfstring{cpu()}{cpu()}}
+{\footnotesize\ttfamily double process\+::cpu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the CPU usage of the process. 
+
+\begin{DoxyReturn}{Returns}
+The CPU usage as a percentage. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_a72218454428d0cf89d262de4e37a35e6}\label{classprocess_a72218454428d0cf89d262de4e37a35e6}} 
+\index{process@{process}!get\_pid@{get\_pid}}
+\index{get\_pid@{get\_pid}!process@{process}}
+\doxysubsubsection{\texorpdfstring{get\_pid()}{get\_pid()}}
+{\footnotesize\ttfamily unsigned process\+::get\+\_\+pid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the PID of the process. 
+
+\begin{DoxyReturn}{Returns}
+The process ID (PID). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_abe4c83894ed50a5ed49855486e6d942e}\label{classprocess_abe4c83894ed50a5ed49855486e6d942e}} 
+\index{process@{process}!get\_res@{get\_res}}
+\index{get\_res@{get\_res}!process@{process}}
+\doxysubsubsection{\texorpdfstring{get\_res()}{get\_res()}}
+{\footnotesize\ttfamily double process\+::get\+\_\+res (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the resident memory usage of the process. 
+
+\begin{DoxyReturn}{Returns}
+The resident memory usage in bytes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_a018dda77acb939bde96ef0a2b196f46a}\label{classprocess_a018dda77acb939bde96ef0a2b196f46a}} 
+\index{process@{process}!get\_virt@{get\_virt}}
+\index{get\_virt@{get\_virt}!process@{process}}
+\doxysubsubsection{\texorpdfstring{get\_virt()}{get\_virt()}}
+{\footnotesize\ttfamily double process\+::get\+\_\+virt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the virtual memory usage of the process. 
+
+\begin{DoxyReturn}{Returns}
+The virtual memory usage in bytes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_a59c926d6c8a20482efa93e67c35f879b}\label{classprocess_a59c926d6c8a20482efa93e67c35f879b}} 
+\index{process@{process}!pri@{pri}}
+\index{pri@{pri}!process@{process}}
+\doxysubsubsection{\texorpdfstring{pri()}{pri()}}
+{\footnotesize\ttfamily int process\+::pri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the priority of the process. 
+
+\begin{DoxyReturn}{Returns}
+The process priority. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_af0f8cda02423dab727810a725e91e60e}\label{classprocess_af0f8cda02423dab727810a725e91e60e}} 
+\index{process@{process}!stat@{stat}}
+\index{stat@{stat}!process@{process}}
+\doxysubsubsection{\texorpdfstring{stat()}{stat()}}
+{\footnotesize\ttfamily char process\+::stat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the current state of the process. 
+
+\begin{DoxyReturn}{Returns}
+The process state as a character (e.\+g., \textquotesingle{}R\textquotesingle{} for running, \textquotesingle{}S\textquotesingle{} for sleeping). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_a8ff4d5a920651ac9bd4e4765d2b61f48}\label{classprocess_a8ff4d5a920651ac9bd4e4765d2b61f48}} 
+\index{process@{process}!user@{user}}
+\index{user@{user}!process@{process}}
+\doxysubsubsection{\texorpdfstring{user()}{user()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::string\& process\+::user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the username of the process owner (const version). 
+
+\begin{DoxyReturn}{Returns}
+The username as a constant reference to a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprocess_ac81afa231fa1b874df53d7ffbf08fc75}\label{classprocess_ac81afa231fa1b874df53d7ffbf08fc75}} 
+\index{process@{process}!user@{user}}
+\index{user@{user}!process@{process}}
+\doxysubsubsection{\texorpdfstring{user()}{user()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string\& process\+::user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the username of the process owner (non-\/const version). 
+
+\begin{DoxyReturn}{Returns}
+The username as a reference to a string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+process/include/process/process.\+hpp\end{DoxyCompactItemize}

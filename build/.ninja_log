@@ -1,0 +1,13 @@
+# ninja log v5
+0	3208	1743242886475952769	process/CMakeFiles/process.dir/source/process.cpp.o	c3ab78ca88432fc2
+3	3224	1743242886475952769	Utils/CMakeFiles/Utils.dir/source/Utils.cpp.o	548f179381da16fe
+0	3279	1743242886475952769	Dialogue/CMakeFiles/Dialogue.dir/source/main.cpp.o	7d25dc0ec4b477d2
+3755	4129	1743242888708952758	Dialogue/Dialogue	285f9da1f23809f
+1	3368	1743242886475952769	System/CMakeFiles/System.dir/source/System.cpp.o	de62fc2c982aa51c
+1	3482	1743242886475952769	parser/CMakeFiles/parser.dir/source/parser.cpp.o	a51485dd9b01612
+3691	3755	1743242886475952769	Display/libDisplay.a	5d7a07e64a291840
+1	3558	1743242886475952769	Display/CMakeFiles/Display.dir/source/Display.cpp.o	af1c93168a90034a
+3624	3691	1743242886475952769	System/libSystem.a	8a8c2164dda10199
+3482	3559	1743242886475952769	parser/libparser.a	64b8a96a8d43b702
+3559	3624	1743242886475952769	process/libprocess.a	e946cee3dcf0eba1
+3559	3625	1743242886475952769	Utils/libUtils.a	b87592f28bc32a79
