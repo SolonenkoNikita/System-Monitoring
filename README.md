@@ -49,6 +49,9 @@ Execute the build script to compile and configure the project:
 ```bash
 ./builder.sh
 ```
+### Appearance
+![image](https://github.com/user-attachments/assets/dc8e6927-8450-4ad7-a37b-79ccb7e58dd7)
+
 ## Documentation
 
 You can find the project documentation [here](https://solonenkonikita.github.io/System-Monitoring/).
